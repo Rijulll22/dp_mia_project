@@ -1,0 +1,94 @@
+node_modules/
+dist/
+build/
+.cache/
+.env*
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+*-debug.log*
+logs/
+*.log
+.claude-replay.*
+.tmp-*
+
+# Platform-managed agentplat state, not project source. In the
+# client-initiated single-repo workspace layout (make's `Path: "."` spec) the
+# repo root IS the workspace root, so these land inside this repo rather than
+# beside it.
+/.plugins/
+/.opencode-skills/
+
+
+
+# ===== Local secrets and environment =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ===== Python environments and caches =====
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== Frontend dependencies and generated files =====
+node_modules/
+dist/
+build/
+coverage/
+
+# ===== Local experiment databases =====
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+# ===== Sensitive datasets =====
+creditcard.csv
+
+# ===== Model weights and generated artifacts =====
+models/
+artifacts/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# ===== Logs and temporary files =====
+*.log
+.DS_Store
+Thumbs.db
+
+
+# ===== Local databases and backups =====
+backend/backups/
+backend/**/*.db
+backend/**/*.sqlite
+backend/**/*.sqlite3
+
+# ===== Uploaded datasets and user-uploaded files =====
+backend/uploads/
+backend/data/
+test_fraud_dataset.csv
+**/creditcard.csv
+**/*fraud*dataset*.csv
+
+# ===== Generated experiment exports and logs =====
+backend/exports/
+backend/logs/
+backend/final_results/
+backend/final_results/**/*.csv
+backend/experiment_runner.lock
+
+# ===== Local audit dumps and generated results =====
+db_dump.json
+audit_results.json
