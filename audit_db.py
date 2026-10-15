@@ -7,11 +7,11 @@ def fetch_all():
     cur = conn.cursor()
     cur.execute("SELECT * FROM experiments")
     rows = cur.fetchall()
-    
+
     data = []
     for r in rows:
         data.append(dict(r))
-        
+
     with open('db_dump.json', 'w') as f:
         json.dump(data, f, indent=2)
 
